@@ -1,0 +1,22 @@
+//全局样式，放置一些全局样式（要放在style文件夹里面）
+//全局样式要在main.js里面引入一下
+@import url("./var.less");
+
+html {
+    color: @words;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue",
+      "微软雅黑", sans-serif;
+    overflow: hidden;
+  }
+  body {
+    overflow: hidden;
+    margin: 0;
+  }
+  
+a{
+    text-decoration: none;
+    color:inherit;
+    &:hover{
+        color:@primary;
+    }
+}

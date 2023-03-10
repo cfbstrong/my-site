@@ -11,7 +11,26 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <style>
+      .loading-img{
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+    <div id="app">
+      <img class="loading-img" src="./img/loading.gif" alt="">
+    </div>
+    <!-- ref cdn -->
+    <% if(NODE_ENV === "production") { %>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vuex/3.5.1/vuex.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue-router/3.4.7/vue-router.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <% } %>
     <!-- built files will be auto injected -->
   </body>
 </html>
